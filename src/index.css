@@ -1,0 +1,462 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* Cambia este valor al ancho deseado */
+}
+
+/* Estilo de la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+  /* Color de fondo de la pista */
+  border-radius: 15px;
+}
+
+/* Estilo del pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #267365;
+  /* Color del pulgar */
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: grab;
+}
+
+.mainLayout {
+  display: flex;
+  gap: 20px;
+  background-color: #EEEDF2;
+}
+
+.mainLayoutContent {
+  margin: 15px 15px 0 0;
+}
+
+.navBar {
+  background-color: #1E1E1E;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 15px 0px;
+  min-height: 100vh;
+}
+
+.contentNavBarBox {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 20px 30px;
+  transition: all 200ms;
+  font-size: 18px;
+}
+
+.contentNavBarBox p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.headerNavBar h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.headerNavBar i {
+  font-size: 20px;
+}
+
+.contentNavBarBox:not(.headerNavBar):hover {
+  background-color: #267365;
+}
+
+.navBarBodyIcon {
+  background-color: #08070A;
+}
+
+.navBarBodyIcon i {
+  color: #FFFFFF;
+}
+
+.NavBarActive {
+  background-color: #267365;
+}
+
+.hiddenNav {
+  display: none;
+}
+
+.buttonActionToggleNavBar {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.buttonActionToggleNavBar i {
+  padding: 5px;
+  transition: all 200ms;
+}
+
+.buttonActionToggleNavBar i:hover {
+  background-color: #267365;
+  border-radius: 50%;
+}
+
+/**----------------------[ OrderPage ]-----------------------------**/
+
+
+/**---------------------[ OrderView ]------------------------------------**/
+
+.orderView {
+  display: flex;
+  gap: 15px;
+}
+
+.orderViewListProducts {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+}
+
+
+/**---------------[ CardOrder ]-------------------**/
+
+.cardOrder {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 15px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.cardOrder p,
+.cardOrder pre {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.cardOrderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* .cardOrderBody {
+
+} */
+
+.cardOrderFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #A6A3A3;
+}
+
+/**---------------[ ContentCards ]--------------------------**/
+
+.contentCards {
+  display: flex;
+  justify-content: center;
+}
+
+.contentCardsBody {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/**--------------------[ NoteOrderView ]-----------------------**/
+
+.noteOrderView {
+  display: grid;
+  grid-template-rows: .2fr 3fr 1fr;
+  min-height: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 15px 20px;
+}
+
+.noteOrderView>div:not(.noteOrderView > div:nth-child(3), .noteOrderView > div:nth-child(4)) {
+  border-bottom: 2px solid #A6A3A3;
+}
+
+.noteOrderViewNumber {
+  display: flex;
+  flex-direction: column;
+}
+
+.noteOrderViewNumber div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.noteOrderViewNumber div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  color: #A6A3A3;
+}
+
+.noteOrderViewNumber div:last-child i {
+  font-size: 20px;
+  color: #000000;
+}
+
+.noteOrderViewDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noteOrderViewDetailsBody {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.noteOrderViewDetailsBody div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.noteOrderViewDetailsBody p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.noteOrderViewDetailsBody div:first-child {
+  font-weight: 600;
+}
+
+.noteOrderViewDetailsBody div:not(.noteOrderViewDetailsBody div:nth-child(1)) {
+  color: #A6A3A3;
+}
+
+.noteOrderViewDetailsDetails {
+  display: flex;
+  justify-content: space-between;
+  color: #A6A3A3;
+}
+
+.noteOrderViewDetailsDetails {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.noteOrderViewTotal h1 {
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.noteOrderViewTotal h1 span {
+  text-align: center;
+  font-size: 35px;
+}
+
+.noteOrderViewFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+/**----------------------[ CardProduct ]--------------------------**/
+
+.cardProduct {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 15px;
+  width: 180px;
+  gap: 5px;
+}
+
+.cardProductHeader,
+.cardProductFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardProductHeader p,
+.cardProductFooter p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cardProductHeader {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cardProductHeader i {
+  font-size: 18px;
+}
+
+/**------------------------------------[ ContentPopUp ]-----------------------------------------**/
+
+.contentPopUp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #1e1e1e3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentPopUpBody {
+  background-color: #ffffff;
+  width: 90%;
+  height: 80%;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 15px;
+}
+
+/**-----------------------------------[ Buttions ]---------------------------------**/
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.btn-light {
+  padding: 5px 5px;
+}
+
+.btn-text {
+  padding: 12px 16px;
+}
+
+.btn-text-light {
+  padding: 5px 9px;
+}
+
+.btn p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.btn i {
+  font-size: 20px;
+}
+
+.buttonCart {
+  border: 1px solid #08070A;
+  background-color: #08070A;
+  color: #ffffff;
+}
+
+.buttonConfirm {
+  border: 1px solid #267365;
+  background-color: #267365;
+  color: #ffffff;
+}
+
+.buttonDelete {
+  border: 1px solid #BA2222;
+  background-color: #BA2222;
+  color: #ffffff;
+}
+
+.buttonDeleteV2 {
+  border: 1px solid #A6A3A3;
+  background-color: #A6A3A3;
+  color: #ffffff;
+}
+
+.buttonBack {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: black;
+}
+
+.buttonDouble {
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+  border: 2px solid #267365;
+  width: 150px;
+  height: 45px;
+}
+
+.buttonDoubleBtn {
+  /* padding: 10px 10px; */
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 100ms;
+}
+
+.buttonDoubleOne {
+  flex: 1.1;
+}
+
+/* .buttonDoubleTwo {
+
+} */
+
+.buttonDoubleActive {
+  background-color: #267365;
+  color: #ffffff;
+  flex: 1.5;
+}
