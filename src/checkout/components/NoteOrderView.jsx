@@ -1,25 +1,39 @@
 import { ButtonBack, ButtonConfirm, ButtonDelete } from "./index"
 import { useContext, useState } from "react";
 import { OrdersContext } from '../context'
+import { useNavigate } from "react-router-dom";
 
 export const NoteOrderView = ({ number, products, date, hour, total, id, customer }) => {
 
     const { showCustomers, setShowCustomers } = useContext(OrdersContext);
 
+    const navigate = useNavigate();
+
     const onShowCustomers = () => {
         setShowCustomers(!showCustomers);
+    }
+
+    const onRemoveCustomer = () => {
+        navigate(`/orders/order?number=${number}`)
     }
 
     return (
         <div className="noteOrderView">
             <div className="noteOrderViewNumber">
-                {/* // TODO: button para limpiar cliente confiable */}
                 <div>
                     <ButtonBack />
                     <h2 >Orden <span>{number}</span></h2>
                 </div>
                 <div>
-                    <p> {customer || 'Cliente Anonimo'} </p>
+                    <div>
+                        {
+                            customer &&
+                            (<button className="buttonBack btn btn-light" onClick={onRemoveCustomer}>
+                                <i className='bx bx-trash'></i>
+                            </button>)
+                        }
+                        <p> {customer || 'Cliente Anonimo'} </p>
+                    </div>
                     <button className="buttonBack btn btn-light" onClick={onShowCustomers}>
                         {
                             !customer ? (<i className='bx bxs-user-check'></i>) : (<i className='bx bx-repost' ></i>)
