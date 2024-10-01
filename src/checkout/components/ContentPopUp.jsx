@@ -1,4 +1,5 @@
 import { ButtonClose } from "./ButtonClose"
+import { CardClients } from "./CardClients"
 
 export const ContentPopUp = ({ elements }) => {
 
@@ -12,7 +13,7 @@ export const ContentPopUp = ({ elements }) => {
                 </div>
                 <div className="contentPopUpMain">
                     {
-                        elements.map(element => <h2 key={element.id} >{JSON.stringify(element)}</h2>)
+                        elements.map(element => <CardClients key={element.id} {...element} />)
                         // TODO: Component, toggle, urlParametros del cliente seleccionado
                     }
                 </div>

@@ -13,13 +13,18 @@ export const NoteOrderView = ({ number, products, date, hour, total, id, custome
     return (
         <div className="noteOrderView">
             <div className="noteOrderViewNumber">
+                {/* // TODO: button para limpiar cliente confiable */}
                 <div>
                     <ButtonBack />
                     <h2 >Orden <span>{number}</span></h2>
                 </div>
                 <div>
-                    <p> {customer || 'Persona'} </p>
-                    <button className="buttonBack btn btn-light" onClick={onShowCustomers}><i className='bx bxs-user-check'></i></button>
+                    <p> {customer || 'Cliente Anonimo'} </p>
+                    <button className="buttonBack btn btn-light" onClick={onShowCustomers}>
+                        {
+                            !customer ? (<i className='bx bxs-user-check'></i>) : (<i className='bx bx-repost' ></i>)
+                        }
+                    </button>
                 </div>
             </div>
 
@@ -37,6 +42,7 @@ export const NoteOrderView = ({ number, products, date, hour, total, id, custome
 
                         {
                             products.map(product =>
+                                // Todo: Helper para calcular y modificar el porcentaje por cliente
                                 <div key={product.id} className="">
                                     <p>{product.name}</p>
                                     <p>{product.amount.amount.toFixed()}<span>{product.amount.unit}</span></p>
@@ -55,7 +61,7 @@ export const NoteOrderView = ({ number, products, date, hour, total, id, custome
             </div>
             <div className="noteOrderViewTotal">
                 <h2>Total</h2>
-                <h1><span>$</span>{total}</h1>
+                <h1><span>$</span>{total.toFixed(2)}</h1>
             </div>
 
             <div className="noteOrderViewFooter">

@@ -355,12 +355,68 @@ body {
 
 .contentPopUpBody {
   background-color: #ffffff;
-  width: 90%;
+  width: 80%;
   height: 80%;
   max-width: 90%;
   max-height: 80%;
   border-radius: 15px;
 }
+
+.contentPopUpHeader {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentPopUpMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+/**------------------------------------[ CardClients ]--------------------------------------**/
+
+.cardClients {
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+}
+
+.cardClients div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #267365;
+  padding: 5px 15px;
+  border-radius: 15px 0 0 15px;
+}
+
+.cardClients div:first-child i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.cardClients div:last-child {
+  background-color: #EEEDF2;
+  min-width: 250px;
+  border-radius: 0px 15px 15px 0px;
+  padding: 16px;
+}
+
+.cardClients div:last-child p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+/**-----------------------------------[ Inputs ]---------------------------------------------**/
+
+.inputSearch {}
 
 /**-----------------------------------[ Buttions ]---------------------------------**/
 
@@ -424,6 +480,16 @@ body {
   border: 1px solid transparent;
   background-color: transparent;
   color: black;
+}
+
+.buttonClose {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: black;
+}
+
+.buttonClose i {
+  font-size: 24px;
 }
 
 .buttonDouble {

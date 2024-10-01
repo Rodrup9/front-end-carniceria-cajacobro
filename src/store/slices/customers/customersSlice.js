@@ -17,6 +17,54 @@ export const customersSlice = createSlice({
 
             },
             {
+                id: 223,
+                name: 'Ramirez',
+                products: [
+                    {
+                        id: 213,
+                        name: 'Carne Molida',
+                        discount: 15,
+                    }
+                ]
+
+            },
+            {
+                id: 567,
+                name: 'Ramirez',
+                products: [
+                    {
+                        id: 213,
+                        name: 'Carne Molida',
+                        discount: 15,
+                    }
+                ]
+
+            },
+            {
+                id: 897,
+                name: 'Ramirez',
+                products: [
+                    {
+                        id: 213,
+                        name: 'Carne Molida',
+                        discount: 15,
+                    }
+                ]
+
+            },
+            {
+                id: 47,
+                name: 'Ricardo Mendez',
+                products: [
+                    {
+                        id: 92193213,
+                        name: 'Carne Molida',
+                        discount: 15,
+                    }
+                ]
+
+            },
+            {
                 id: 325,
                 name: 'Perez',
                 products: [

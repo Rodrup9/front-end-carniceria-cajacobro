@@ -9,3 +9,4 @@ export * from './ButtonCancel';
 export * from './ButtonDelete';
 export * from './ContentPopUp';
 export * from './ButtonClose';
+export * from './CardClients';
