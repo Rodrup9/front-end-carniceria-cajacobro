@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom"
 
-export const ButtonBack = ({ label }) => {
+export const ButtonBack = ({ label, path }) => {
 
     const navigate = useNavigate();
 
     const onNavigateBack = () => {
-        navigate(-1);
+        navigate(path);
     }
 
 

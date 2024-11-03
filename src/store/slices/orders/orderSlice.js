@@ -101,9 +101,8 @@ export const orderSlice = createSlice({
             const { number, id } = action.payload;
             const order = state.orders.find(order => order.number == number);
 
-            if (order) {
-                order.products = order.products.filter(product => product.id != id);
-            }
+            if (order) order.products = order.products.filter(product => product.id != id);
+
 
         }
     }

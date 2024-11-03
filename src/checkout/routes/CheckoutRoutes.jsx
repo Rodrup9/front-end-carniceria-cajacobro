@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { CustomersPage, DebtsPage, EmployeesPage, OrdersPage } from "../pages"
-import { OrdersProvider } from "../context"
+import { CustomersProvider, OrdersProvider } from "../context"
 
 export const CheckoutRoutes = () => {
     return (
@@ -11,9 +11,13 @@ export const CheckoutRoutes = () => {
                     <OrdersPage />
                 </OrdersProvider>
             } />
-            <Route path="/employees" element={<EmployeesPage />} />
-            <Route path="/customers" element={<CustomersPage />} />
-            <Route path="/debts" element={<DebtsPage />} />
+            <Route path="/employees/*" element={<EmployeesPage />} />
+            <Route path="/customers/*" element={
+                <CustomersProvider>
+                    <CustomersPage />
+                </CustomersProvider>
+            } />
+            <Route path="/debts/*" element={<DebtsPage />} />
         </Routes>
     )
 }

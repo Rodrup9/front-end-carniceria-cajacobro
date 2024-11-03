@@ -10,3 +10,7 @@ export * from './ButtonDelete';
 export * from './ContentPopUp';
 export * from './ButtonClose';
 export * from './CardClients';
+export * from './ViewClienteList';
+export * from './CardProductCustomer';
+export * from './CardProductName';
+export * from './FormCustomProductCustomer';

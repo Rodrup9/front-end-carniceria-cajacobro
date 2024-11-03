@@ -91,16 +91,23 @@ export const customersSlice = createSlice({
         ],
     },
     reducers: {
-        addCustomer: (state) => {
-            state.state = !state.state;
-            localStorage.setItem('navBar', state.state);
-        },
+        // addCustomer: (state) => {
+        //     state.state = !state.state;
+        //     localStorage.setItem('navBar', state.state);
+        // },
         // deleteCustomer: (state, action) => {
 
         // },
-        // addProductCustomer: (state, action) => {
+        addProductCustomer: (state, action) => {
+            console.log(action);
 
-        // },
+            const { id, product } = action.payload;
+
+            const customer = state.customers.find(customer => id == customer.id);
+
+            if (customer) customer.products = [...customer.products, product]
+
+        },
         // deleteProductCustomer: (state, action) => {
 
         // },
@@ -110,4 +117,4 @@ export const customersSlice = createSlice({
     }
 });
 
-export const { addCustomer } = customersSlice.actions;
+export const { addProductCustomer } = customersSlice.actions;

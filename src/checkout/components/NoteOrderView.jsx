@@ -21,7 +21,7 @@ export const NoteOrderView = ({ number, products, date, hour, total, id, custome
         <div className="noteOrderView">
             <div className="noteOrderViewNumber">
                 <div>
-                    <ButtonBack />
+                    <ButtonBack path={'/orders/'} />
                     <h2 >Orden <span>{number}</span></h2>
                 </div>
                 <div>
@@ -80,7 +80,7 @@ export const NoteOrderView = ({ number, products, date, hour, total, id, custome
 
             <div className="noteOrderViewFooter">
                 <ButtonDelete label='Borrar' id={id} />
-                <ButtonConfirm label='Confirmar' />
+                <ButtonConfirm label='Confirmar' parameters={{ number, customer }} />
                 {/*// TODO: Confirmar eliminación */}
                 {/*// TODO: Funcionalidad de Button confirmar */}
             </div>
