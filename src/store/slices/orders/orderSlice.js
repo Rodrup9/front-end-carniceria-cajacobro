@@ -16,7 +16,7 @@ export const orderSlice = createSlice({
                             amount: 1273
                         },
                         price: 132.43,
-                        discount: 20
+                        discount: 0
                     },
                     {
                         id: 2143654,
@@ -26,7 +26,7 @@ export const orderSlice = createSlice({
                             amount: 325
                         },
                         price: 200.43,
-                        discount: 20
+                        discount: 0
                     },
                 ],
                 date: '21/30/0235',
@@ -44,7 +44,7 @@ export const orderSlice = createSlice({
                             amount: 1273
                         },
                         price: 132.43,
-                        discount: 20
+                        discount: 0
                     },
                     {
                         id: 2143654,
@@ -54,7 +54,7 @@ export const orderSlice = createSlice({
                             amount: 325
                         },
                         price: 200.43,
-                        discount: 20
+                        discount: 0
                     },
                 ],
                 date: '21/30/0235',
@@ -72,7 +72,7 @@ export const orderSlice = createSlice({
                             amount: 1273
                         },
                         price: 132.43,
-                        discount: 20
+                        discount: 0
                     },
                     {
                         id: 2143654,
@@ -82,7 +82,7 @@ export const orderSlice = createSlice({
                             amount: 325
                         },
                         price: 200.43,
-                        discount: 20
+                        discount: 0
                     },
                 ],
                 date: '21/30/0235',

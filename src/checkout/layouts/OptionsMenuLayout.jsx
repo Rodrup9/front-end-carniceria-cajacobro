@@ -5,10 +5,7 @@ export const OptionsMenuLayout = () => {
             <div className="optionsMenuLayoutHeader">
                 <h2>Clientes Confiables</h2>
             </div>
-            <hr />
-            <div className="optionsMenuLayoutSubMenu">
-                
-            </div>
+
         </div>
         
     )

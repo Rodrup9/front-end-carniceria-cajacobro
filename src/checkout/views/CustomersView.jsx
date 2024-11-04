@@ -5,6 +5,7 @@ import { getCustomerById } from "../helpers";
 import { CardProductCustomer } from "../components";
 import { CustomersContext } from "../context";
 import { useContext, useEffect } from "react";
+import { useForm } from "../hooks";
 
 export const CustomersView = () => {
 
@@ -18,6 +19,10 @@ export const CustomersView = () => {
 
     const { name, products } = getCustomerById(id, customers);
 
+    const { nameCustomer, onInputChange } = useForm({
+        nameCustomer: name
+    });
+
     const onShowProducts = () => {
         setShowProducts(!showProducts);
     };
@@ -27,7 +32,8 @@ export const CustomersView = () => {
             <section className="customerViewCustomer">
                 <h1>Información del cliente</h1>
                 <div className="">
-                    <input type="text" name="name" value={name} />
+                    <label htmlFor="nameCustomer">Nombre: </label>
+                    <input className="input" type="text" name="nameCustomer" value={nameCustomer} onChange={onInputChange} />
                 </div>
             </section>
             <section className="customerViewProducts">

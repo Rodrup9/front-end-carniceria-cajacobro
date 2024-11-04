@@ -3,7 +3,7 @@ import { MainLayout, OptionsMenuLayout } from "../layouts"
 import { CustomersView, ListCustomersView } from "../views"
 import { useContext } from "react";
 import { CustomersContext } from "../context";
-import { ContentPopUp } from "../components";
+import { ContentPopUp, ToolbarCustomer } from "../components";
 import { useSelector } from "react-redux";
 
 export const CustomersPage = () => {
@@ -15,7 +15,12 @@ export const CustomersPage = () => {
                 <OptionsMenuLayout />
                 <Routes>
                     <Route path="/*" element={<ListCustomersView />} />
-                    <Route path="/customer" element={<CustomersView />} />
+                    <Route path="/customer" element={
+                        <>
+                            {/* <ToolbarCustomer /> */}
+                            <CustomersView />
+                        </>
+                    } />
                 </Routes>
             </div>
             { showProducts && <ContentPopUp elements={products} type={'product'} /> }

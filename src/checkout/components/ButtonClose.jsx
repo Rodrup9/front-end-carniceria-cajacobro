@@ -3,18 +3,26 @@ import { CustomersContext, OrdersContext } from "../context";
 
 export const ButtonClose = ({type}) => {
 
+    let context = null;
+
+    if (type === 'customer') {
+        context = useContext(OrdersContext);
+    } else if (type === 'product' || type === 'customProduct') {
+        context = useContext(CustomersContext);
+    }
+
     const onClose = () => {
         switch (type) {
             case 'customer':
-                const { setShowCustomers, showCustomers} = useContext(OrdersContext)
+                const { setShowCustomers, showCustomers} = context;
                 setShowCustomers(!showCustomers);
                 break;
             case 'product':
-                const { setShowProducts, showProducts} = useContext(CustomersContext)
+                const { setShowProducts, showProducts} = context;
                 setShowProducts(!showProducts);
                 break;
             case 'customProduct':
-                const { setShowCustomProduct, showCustomProduct} = useContext(CustomersContext)
+                const { setShowCustomProduct, showCustomProduct} = context;
                 setShowCustomProduct(!showCustomProduct);
                 break;
             default:

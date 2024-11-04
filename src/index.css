@@ -588,10 +588,13 @@ body {
   gap: 10px;
 }
 
-.customerViewProducts div:nth-child(2) {
+.customerViewProducts > div:nth-child(2) {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  padding-right: 10px;
+  gap: 10px;
+  height: 85%;
+  overflow-y: scroll;
 }
 
 .customerViewDebt {
@@ -622,15 +625,19 @@ body {
   gap: 20px;
 }
 
-.cardProductCustomerInfo div label {
+.cardProductCustomerInfoPrice {
+  display: flex;
+}
+
+.cardProductCustomerInfoPrice label {
   font-weight: 400;
   margin: 0 5px 0 0;
   padding: 0;
   line-height: 1.2;
 }
 
-.cardProductCustomerInfo div input {
-  width: 30px;
+.cardProductCustomerInfoPrice input {
+  width: 15ch;
   text-align: center;
 }
 

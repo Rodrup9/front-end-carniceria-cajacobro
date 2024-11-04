@@ -14,3 +14,4 @@ export * from './ViewClienteList';
 export * from './CardProductCustomer';
 export * from './CardProductName';
 export * from './FormCustomProductCustomer';
+export * from './ToolbarCustomer';
